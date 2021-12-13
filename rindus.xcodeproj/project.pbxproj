@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78DB7C4B62E665C6CA816F72 /* Pods_rindus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CCC554D5FF63EDE63E73E9 /* Pods_rindus.framework */; };
 		7B7953E42767D9E100EFB0CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7953E32767D9E100EFB0CB /* AppDelegate.swift */; };
 		7B7953E62767D9E100EFB0CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7953E52767D9E100EFB0CB /* SceneDelegate.swift */; };
 		7B7953E82767D9E100EFB0CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7953E72767D9E100EFB0CB /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25CCC554D5FF63EDE63E73E9 /* Pods_rindus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rindus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		345BE1E71C774D4D219ABF47 /* Pods-rindus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rindus.release.xcconfig"; path = "Target Support Files/Pods-rindus/Pods-rindus.release.xcconfig"; sourceTree = "<group>"; };
+		723DF4596CF2A3096A43AF30 /* Pods-rindus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rindus.debug.xcconfig"; path = "Target Support Files/Pods-rindus/Pods-rindus.debug.xcconfig"; sourceTree = "<group>"; };
 		7B7953E02767D9E100EFB0CB /* rindus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rindus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B7953E32767D9E100EFB0CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B7953E52767D9E100EFB0CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78DB7C4B62E665C6CA816F72 /* Pods_rindus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		191CEF715AE83E8AF15B20B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				723DF4596CF2A3096A43AF30 /* Pods-rindus.debug.xcconfig */,
+				345BE1E71C774D4D219ABF47 /* Pods-rindus.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1E47A8BD81F4FD6B2A638E92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25CCC554D5FF63EDE63E73E9 /* Pods_rindus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7B7953D72767D9E100EFB0CB = {
 			isa = PBXGroup;
 			children = (
 				7B7953E22767D9E100EFB0CB /* rindus */,
 				7B7953E12767D9E100EFB0CB /* Products */,
+				191CEF715AE83E8AF15B20B3 /* Pods */,
+				1E47A8BD81F4FD6B2A638E92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B7953F42767D9E400EFB0CB /* Build configuration list for PBXNativeTarget "rindus" */;
 			buildPhases = (
+				348E6FBEDB23EF58B2F7B6E3 /* [CP] Check Pods Manifest.lock */,
 				7B7953DC2767D9E100EFB0CB /* Sources */,
 				7B7953DD2767D9E100EFB0CB /* Frameworks */,
 				7B7953DE2767D9E100EFB0CB /* Resources */,
@@ -132,6 +157,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		348E6FBEDB23EF58B2F7B6E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rindus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B7953DC2767D9E100EFB0CB /* Sources */ = {
@@ -284,6 +334,7 @@
 		};
 		7B7953F52767D9E400EFB0CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 723DF4596CF2A3096A43AF30 /* Pods-rindus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -297,6 +348,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +364,7 @@
 		};
 		7B7953F62767D9E400EFB0CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 345BE1E71C774D4D219ABF47 /* Pods-rindus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -325,6 +378,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
