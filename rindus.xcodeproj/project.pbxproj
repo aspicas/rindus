@@ -10,8 +10,6 @@
 		78DB7C4B62E665C6CA816F72 /* Pods_rindus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CCC554D5FF63EDE63E73E9 /* Pods_rindus.framework */; };
 		7B7953E42767D9E100EFB0CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7953E32767D9E100EFB0CB /* AppDelegate.swift */; };
 		7B7953E62767D9E100EFB0CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7953E52767D9E100EFB0CB /* SceneDelegate.swift */; };
-		7B7953E82767D9E100EFB0CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7953E72767D9E100EFB0CB /* ViewController.swift */; };
-		7B7953EB2767D9E100EFB0CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B7953E92767D9E100EFB0CB /* Main.storyboard */; };
 		7B7953ED2767D9E400EFB0CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B7953EC2767D9E400EFB0CB /* Assets.xcassets */; };
 		7B7953F02767D9E400EFB0CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B7953EE2767D9E400EFB0CB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -23,8 +21,6 @@
 		7B7953E02767D9E100EFB0CB /* rindus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rindus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B7953E32767D9E100EFB0CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B7953E52767D9E100EFB0CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B7953E72767D9E100EFB0CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7B7953EA2767D9E100EFB0CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B7953EC2767D9E400EFB0CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B7953EF2767D9E400EFB0CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B7953F12767D9E400EFB0CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,15 +76,45 @@
 		7B7953E22767D9E100EFB0CB /* rindus */ = {
 			isa = PBXGroup;
 			children = (
-				7B7953E32767D9E100EFB0CB /* AppDelegate.swift */,
-				7B7953E52767D9E100EFB0CB /* SceneDelegate.swift */,
-				7B7953E72767D9E100EFB0CB /* ViewController.swift */,
-				7B7953E92767D9E100EFB0CB /* Main.storyboard */,
-				7B7953EC2767D9E400EFB0CB /* Assets.xcassets */,
-				7B7953EE2767D9E400EFB0CB /* LaunchScreen.storyboard */,
-				7B7953F12767D9E400EFB0CB /* Info.plist */,
+				7B7953F72767E0AA00EFB0CB /* AppDelegate */,
+				7B7953FA2767E42B00EFB0CB /* Features */,
+				7B7953F92767E2D500EFB0CB /* Networking */,
+				7B7953F82767E0F200EFB0CB /* Resources */,
 			);
 			path = rindus;
+			sourceTree = "<group>";
+		};
+		7B7953F72767E0AA00EFB0CB /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7B7953E32767D9E100EFB0CB /* AppDelegate.swift */,
+				7B7953E52767D9E100EFB0CB /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7B7953F82767E0F200EFB0CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7B7953EC2767D9E400EFB0CB /* Assets.xcassets */,
+				7B7953F12767D9E400EFB0CB /* Info.plist */,
+				7B7953EE2767D9E400EFB0CB /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7B7953F92767E2D500EFB0CB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7B7953FA2767E42B00EFB0CB /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +128,7 @@
 				7B7953DC2767D9E100EFB0CB /* Sources */,
 				7B7953DD2767D9E100EFB0CB /* Frameworks */,
 				7B7953DE2767D9E100EFB0CB /* Resources */,
+				B600C766AC5042AB621FC4AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,7 +179,6 @@
 			files = (
 				7B7953F02767D9E400EFB0CB /* LaunchScreen.storyboard in Resources */,
 				7B7953ED2767D9E400EFB0CB /* Assets.xcassets in Resources */,
-				7B7953EB2767D9E100EFB0CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +207,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B600C766AC5042AB621FC4AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rindus/Pods-rindus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rindus/Pods-rindus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rindus/Pods-rindus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -188,7 +231,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B7953E82767D9E100EFB0CB /* ViewController.swift in Sources */,
 				7B7953E42767D9E100EFB0CB /* AppDelegate.swift in Sources */,
 				7B7953E62767D9E100EFB0CB /* SceneDelegate.swift in Sources */,
 			);
@@ -197,14 +239,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7B7953E92767D9E100EFB0CB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B7953EA2767D9E100EFB0CB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7B7953EE2767D9E400EFB0CB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -342,10 +376,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3PRDBAKB2S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = rindus/Info.plist;
+				INFOPLIST_FILE = rindus/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -372,10 +405,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3PRDBAKB2S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = rindus/Info.plist;
+				INFOPLIST_FILE = rindus/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
