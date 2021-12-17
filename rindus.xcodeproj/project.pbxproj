@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		78DB7C4B62E665C6CA816F72 /* Pods_rindus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CCC554D5FF63EDE63E73E9 /* Pods_rindus.framework */; };
+		7B723800276B997800653C65 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7237FF276B997800653C65 /* MainTabBarViewController.swift */; };
+		7B723804276CADD900653C65 /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B723803276CADD900653C65 /* MainTabBarRouter.swift */; };
+		7B723808276CB62100653C65 /* MainWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B723807276CB62100653C65 /* MainWebViewController.swift */; };
+		7B72380B276CBAB900653C65 /* MainWebRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B72380A276CBAB900653C65 /* MainWebRouter.swift */; };
+		7B72380F276CC35900653C65 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B72380E276CC35900653C65 /* SpinnerView.swift */; };
 		7B7953E42767D9E100EFB0CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7953E32767D9E100EFB0CB /* AppDelegate.swift */; };
 		7B7953E62767D9E100EFB0CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7953E52767D9E100EFB0CB /* SceneDelegate.swift */; };
 		7B7953ED2767D9E400EFB0CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B7953EC2767D9E400EFB0CB /* Assets.xcassets */; };
@@ -18,6 +23,11 @@
 		25CCC554D5FF63EDE63E73E9 /* Pods_rindus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rindus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		345BE1E71C774D4D219ABF47 /* Pods-rindus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rindus.release.xcconfig"; path = "Target Support Files/Pods-rindus/Pods-rindus.release.xcconfig"; sourceTree = "<group>"; };
 		723DF4596CF2A3096A43AF30 /* Pods-rindus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rindus.debug.xcconfig"; path = "Target Support Files/Pods-rindus/Pods-rindus.debug.xcconfig"; sourceTree = "<group>"; };
+		7B7237FF276B997800653C65 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		7B723803276CADD900653C65 /* MainTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRouter.swift; sourceTree = "<group>"; };
+		7B723807276CB62100653C65 /* MainWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWebViewController.swift; sourceTree = "<group>"; };
+		7B72380A276CBAB900653C65 /* MainWebRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWebRouter.swift; sourceTree = "<group>"; };
+		7B72380E276CC35900653C65 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		7B7953E02767D9E100EFB0CB /* rindus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rindus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B7953E32767D9E100EFB0CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B7953E52767D9E100EFB0CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +63,72 @@
 				25CCC554D5FF63EDE63E73E9 /* Pods_rindus.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B7237FE276B98D700653C65 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				7B723802276B9F8A00653C65 /* Routers */,
+				7B723801276B9F5000653C65 /* ViewControllers */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		7B723801276B9F5000653C65 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B7237FF276B997800653C65 /* MainTabBarViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7B723802276B9F8A00653C65 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				7B723803276CADD900653C65 /* MainTabBarRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		7B723805276CB5AE00653C65 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				7B723809276CBA8E00653C65 /* Routers */,
+				7B723806276CB5C900653C65 /* ViewControllers */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		7B723806276CB5C900653C65 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B723807276CB62100653C65 /* MainWebViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7B723809276CBA8E00653C65 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				7B72380A276CBAB900653C65 /* MainWebRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		7B72380C276CC16A00653C65 /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				7B72380D276CC17400653C65 /* Views */,
+			);
+			path = Spinner;
+			sourceTree = "<group>";
+		};
+		7B72380D276CC17400653C65 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7B72380E276CC35900653C65 /* SpinnerView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7B7953D72767D9E100EFB0CB = {
@@ -113,6 +189,9 @@
 		7B7953FA2767E42B00EFB0CB /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				7B72380C276CC16A00653C65 /* Spinner */,
+				7B723805276CB5AE00653C65 /* WebView */,
+				7B7237FE276B98D700653C65 /* TabBar */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -231,8 +310,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B72380B276CBAB900653C65 /* MainWebRouter.swift in Sources */,
+				7B723800276B997800653C65 /* MainTabBarViewController.swift in Sources */,
+				7B723808276CB62100653C65 /* MainWebViewController.swift in Sources */,
 				7B7953E42767D9E100EFB0CB /* AppDelegate.swift in Sources */,
 				7B7953E62767D9E100EFB0CB /* SceneDelegate.swift in Sources */,
+				7B723804276CADD900653C65 /* MainTabBarRouter.swift in Sources */,
+				7B72380F276CC35900653C65 /* SpinnerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
