@@ -11,9 +11,16 @@ import SnapKit
 
 class MainWebViewController: UIViewController {
 
-    lazy var webView: WKWebView = {
+    private lazy var webView: WKWebView = {
         let webView = WKWebView()
         return webView
+    }()
+    
+    private lazy var spinnerView: SpinnerView = {
+        let spinnerView = SpinnerView()
+        spinnerView.backgroundColor = .lightGray
+        spinnerView.setSpinnerColor(.white)
+        return spinnerView
     }()
     
     var urlString: String = ""
@@ -46,10 +53,16 @@ class MainWebViewController: UIViewController {
 
 extension MainWebViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        
+        self.view.addSubview(spinnerView)
+        spinnerView.snp.makeConstraints { make in
+            make.left.equalTo(view)
+            make.right.equalTo(view)
+            make.top.equalTo(view)
+            make.bottom.equalTo(view)
+        }
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        
+        spinnerView.removeFromSuperview()
     }
 }

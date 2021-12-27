@@ -6,15 +6,36 @@
 //
 
 import UIKit
+import SnapKit
 
 class SpinnerView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    private lazy var spinnerIndivatorView: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView(style: .large)
+        return spinner
+    }()
 
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addSpinner()
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        addSpinner()
+    }
+    
+    private func addSpinner() {
+        self.addSubview(spinnerIndivatorView)
+        spinnerIndivatorView.snp.makeConstraints { make in
+            make.center.equalTo(self)
+        }
+        spinnerIndivatorView.startAnimating()
+    }
+    
+    func setSpinnerColor(_ color: UIColor) {
+        spinnerIndivatorView.color = color
+    }
+    
 }
