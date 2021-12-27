@@ -38,4 +38,14 @@ class SpinnerView: UIView {
         spinnerIndivatorView.color = color
     }
     
+    func setup(superView: UIView) {
+        superView.addSubview(self)
+        self.snp.makeConstraints { make in
+            make.left.equalTo(superView)
+            make.right.equalTo(superView)
+            make.top.equalTo(superView)
+            make.bottom.equalTo(superView)
+        }
+    }
+    
 }

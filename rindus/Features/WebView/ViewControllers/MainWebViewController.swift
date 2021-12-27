@@ -53,13 +53,7 @@ class MainWebViewController: UIViewController {
 
 extension MainWebViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        self.view.addSubview(spinnerView)
-        spinnerView.snp.makeConstraints { make in
-            make.left.equalTo(view)
-            make.right.equalTo(view)
-            make.top.equalTo(view)
-            make.bottom.equalTo(view)
-        }
+        spinnerView.setup(superView: view)
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
