@@ -9,7 +9,8 @@ import Foundation
 
 class MainTabBarRouter {
     static func makeView() -> MainTabBarViewController {
-        let views = [MainWebRouter.makeView(url: "https://www.c-and-a.com")]
+        let views = [MainWeatherRouter.makeView(),
+                     MainWebRouter.makeView(url: "https://www.c-and-a.com")]
         let controller = MainTabBarViewController(views)
         return controller
     }
